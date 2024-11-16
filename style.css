@@ -5,4 +5,10 @@
   background-color: rgb(10, 61, 90);
   width: 50vw;
   height: 50vh;
+}
+
+.carrousel_x {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
