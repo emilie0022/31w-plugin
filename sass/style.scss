@@ -6,9 +6,10 @@
     background-color: rgb(10, 61, 90);
     width: 50vw;
     height: 50vh;
+    z-index: 9;
 }
 
-.carrousel_X{
+.carrousel__X{
     position: absolute;
     top: 0;
     right: 0; 
@@ -16,4 +17,9 @@
 
 .carrousel--ouvrir{
     transform: scale(1);
+}
+
+.carrousel__gauche, .carrousel__droite{
+    background: none;
+    border: none;
 }
