@@ -19,7 +19,19 @@
   transform: scale(1);
 }
 
-.carrousel__gauche, .carrousel__droite {
+.carrousel__gauche,
+.carrousel__droite {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
   background: none;
   border: none;
+}
+
+.carrousel__gauche {
+  left: 0;
+}
+
+.carrousel__droite {
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
