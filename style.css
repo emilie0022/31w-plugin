@@ -2,13 +2,18 @@
   position: absolute;
   top: 25vh;
   left: 25vw;
+  transform: scale(0);
   background-color: rgb(10, 61, 90);
   width: 50vw;
   height: 50vh;
 }
 
-.carrousel_x {
+.carrousel_X {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.carrousel--ouvrir {
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */

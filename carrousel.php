@@ -33,7 +33,7 @@ function genere_carrousel()
     $chaine =
         '<button class="carrousel__bouton">Ouvrir</button>;
         <div class="carrousel">
-            <button class="carrousel__x">X</button>
+            <button class="carrousel__X">X</button>
             <button class="carrousel__gauche">gauche</button>
             <button class="carrousel__droite">droite</button>
         <figure class="carrousel__figure"></figure>
