@@ -16,6 +16,7 @@
             console.log(elm.src);
             let img = document.createElement("img");
             img.src = elm.src;
+            img.classList.add("carrousel__img")
             carrousel__figure.appendChild(img);
         }
     }

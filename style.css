@@ -13,6 +13,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 9;
 }
 
 .carrousel--ouvrir {
@@ -24,7 +25,7 @@
   position: absolute;
   top: 50%;
   z-index: 9;
-  background: none;
+  background-color: rgb(10, 61, 90);
   border: none;
 }
 
@@ -34,4 +35,20 @@
 
 .carrousel__droite {
   right: 0;
+}
+
+.carrousel__figure {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.carrousel__img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+  border: solid 4px #cceaff;
 }/*# sourceMappingURL=style.css.map */
