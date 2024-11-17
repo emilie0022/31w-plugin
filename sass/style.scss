@@ -2,7 +2,8 @@
     position: absolute;
     top: 25vh;
     left: 25vw; 
-    transform: scale(0);   
+    transform: scale(0); 
+    transition: ease-in 0.5s; 
     background-color: rgb(10, 61, 90);
     width: 50vw;
     height: 50vh;
@@ -56,4 +57,5 @@
 
 .carrousel__img--visible{
     opacity: 1;
+    transition: 1s;
 }
