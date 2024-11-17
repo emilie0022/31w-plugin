@@ -3,13 +3,15 @@
     let carrousel = document.querySelector('.carrousel');
     let carrousel__bouton = document.querySelector(".carrousel__bouton");
     let carrousel__X = document.querySelector(".carrousel__X");
+    let carrousel__gauche = document.querySelector(".carrousel__gauche");
+    let carrousel__droite = document.querySelector(".carrousel__droite");
     let carrousel__image = document.querySelector(".carrousel__image");
     let carrousel__figure = document.querySelector(".carrousel__figure");
     let galerie = document.querySelector(".galerie");
     let galerie__img = document.querySelectorAll(".galerie img");
     console.log(galerie__img.length);
     
-
+    let indexActuel = 0;
 
     function remplirCarrousel(){
         for(elm of galerie__img){
@@ -26,7 +28,7 @@
             remplirCarrousel();
         }
 
-        afficheImage(4);
+        afficheImage(0);
         carrousel.classList.add('carrousel--ouvrir')
         console.log("ouvrir");
         
@@ -34,6 +36,18 @@
 
     carrousel__X.addEventListener('click', function(){
         carrousel.classList.remove("carrousel--ouvrir");
+        console.log("fermer");
+    });
+
+    carrousel__gauche.addEventListener("click", function () {
+      indexActuel =
+        (indexActuel - 1 + galerie__img.length) % galerie__img.length;
+      afficheImage(indexActuel);
+    });
+
+    carrousel__droite.addEventListener("click", function () {
+        indexActuel = (indexActuel + 1) % galerie__img.length;
+        afficheImage(indexActuel);
     });
 
     function afficheImage(index){
