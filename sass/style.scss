@@ -1,0 +1,71 @@
+.carrousel{
+    position: absolute;
+    top: 25vh;
+    left: 25vw; 
+    transform: scale(0); 
+    transition: ease-in 0.5s; 
+    background-color: rgb(10, 61, 90);
+    width: 50vw;
+    height: 50vh;
+    z-index: 9;
+}
+
+.carrousel__X{
+    position: absolute;
+    top: 0;
+    right: 0; 
+    z-index: 9;
+    cursor: pointer;
+}
+
+.carrousel--ouvrir{
+    transform: scale(1);
+
+}
+
+.carrousel__gauche,
+.carrousel__droite{
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    background-color: rgb(10, 61, 90);
+    border: none;
+    cursor: pointer;
+
+}
+.carrousel__gauche{
+    left: 0;
+}
+
+.carrousel__droite{
+    right: 0;
+}
+
+.carrousel__figure{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.carrousel__img{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    object-fit:cover;
+    border: solid 4px #cceaff;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carrousel__img--visible{
+    opacity: 1;
+    transition: 1s;
+    display: block;
+}
+
+.galerie{
+    cursor: pointer;
+}
