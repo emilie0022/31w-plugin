@@ -15,6 +15,7 @@
   top: 0;
   right: 0;
   z-index: 9;
+  cursor: pointer;
 }
 
 .carrousel--ouvrir {
@@ -28,6 +29,7 @@
   z-index: 9;
   background-color: rgb(10, 61, 90);
   border: none;
+  cursor: pointer;
 }
 
 .carrousel__gauche {
@@ -53,9 +55,16 @@
   object-fit: cover;
   border: solid 4px #cceaff;
   opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 .carrousel__img--visible {
   opacity: 1;
   transition: 1s;
+  display: block;
+}
+
+.galerie {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

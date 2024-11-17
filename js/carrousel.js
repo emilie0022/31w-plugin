@@ -1,11 +1,9 @@
 (function(){
     console.log("vive Javascript");
     let carrousel = document.querySelector('.carrousel');
-    let carrousel__bouton = document.querySelector(".carrousel__bouton");
     let carrousel__X = document.querySelector(".carrousel__X");
     let carrousel__gauche = document.querySelector(".carrousel__gauche");
     let carrousel__droite = document.querySelector(".carrousel__droite");
-    let carrousel__image = document.querySelector(".carrousel__image");
     let carrousel__figure = document.querySelector(".carrousel__figure");
     let galerie = document.querySelector(".galerie");
     let galerie__img = document.querySelectorAll(".galerie img");
@@ -23,16 +21,6 @@
         }
     }
 
-    carrousel__bouton.addEventListener("click", function () {
-        if(carrousel__figure.innerHTML ===""){
-            remplirCarrousel();
-        }
-
-        afficheImage(0);
-        carrousel.classList.add('carrousel--ouvrir')
-        console.log("ouvrir");
-        
-    })
 
     carrousel__X.addEventListener('click', function(){
         carrousel.classList.remove("carrousel--ouvrir");
@@ -57,4 +45,16 @@
         }
         carrousel__img[index].classList.add("carrousel__img--visible");
     }
+
+    galerie__img.forEach((img, index) => {
+        img.addEventListener("click", function () {
+        if (carrousel__figure.innerHTML === "") {
+            remplirCarrousel(); // Remplit le carrousel au premier clic
+        }
+        indexActuel = index; // Définit l'image sélectionnée comme actuelle
+        afficheImage(indexActuel);
+        carrousel.classList.add("carrousel--ouvrir");
+        console.log(`Carrousel ouvert avec l'image ${indexActuel}`);
+        });
+    });
 })();
