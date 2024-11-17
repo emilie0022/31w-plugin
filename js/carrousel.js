@@ -26,7 +26,7 @@
             remplirCarrousel();
         }
 
-       
+        afficheImage(4);
         carrousel.classList.add('carrousel--ouvrir')
         console.log("ouvrir");
         
@@ -34,6 +34,13 @@
 
     carrousel__X.addEventListener('click', function(){
         carrousel.classList.remove("carrousel--ouvrir");
-    })
-})()
+    });
 
+    function afficheImage(index){
+        let carrousel__img = document.querySelectorAll(".carrousel__img");
+        for (let i =0; i < carrousel__img.length; i++){
+            carrousel__img[i].classList.remove("carrousel__img--visible");
+        }
+        carrousel__img[index].classList.add("carrousel__img--visible");
+    }
+})();
